@@ -19,17 +19,17 @@ import java.util.*;
 public class StudentGroup implements StudentArrayOperation {
 
 	private Student[] students;
-	private ArrayList<Student> std;
+	private ArrayList<Student> std;                       //new arraylist declared
 	/**
 	 * DO NOT remove or change this constructor, it will be used during task check
 	 * @param length
 	 */
         public void conArraytoArlist()
          {
-          std=new ArrayList<Student>(Arrays.asList(this.students));
+          std=new ArrayList<Student>(Arrays.asList(this.students));      //method for converting students array to arraylist std
          }
         
-		public void conArlisttoArray()
+		public void conArlisttoArray()                           //method for converting std arraylist to students array
          {
           this.students= new Student[std.size()];
           this.students=std.toArray(this.students);
@@ -48,11 +48,11 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	    public void setStudents(Student[] students) {
 		try{
-        for(int i=0;i<students.length;i++)
-        {
-        this.students[i]=students[i];
-        }
-        }
+                    for(int i=0;i<students.length;i++)
+                     {
+                    this.students[i]=students[i];
+                     }
+                    }
           	catch(IllegalArgumentException ex)
                    {
                    System.out.println(ex);
